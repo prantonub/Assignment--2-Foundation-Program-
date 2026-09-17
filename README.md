@@ -1,23 +1,24 @@
 # Movie World
 
-A polished, responsive movie and TV show discovery app. Browse a full catalog, search by title, and open a details modal for any show.
+A responsive movie and TV show discovery app built with React. Browse shows, search by title, and view detailed information in an interactive modal.
 
 ## Features
 
-- Home page with a hero section, a live poster collage, a feature overview,
-  and a "what's on the catalog" strip.
-- Movies page listing all shows in a responsive card grid.
-- Search by title with a short debounce, showing a live result count.
-- Movie details modal with poster, rating, release date, runtime, status,
-  genres, network, and a clean synopsis. Closes via the X button, the Close
-  button, an outside click, or the Escape key, and locks background scroll
-  while open.
-- Loading, error, and empty states, including a "Try Again" retry flow.
-- About and Contact pages, linked from the navbar.
-- Fully responsive from 320px phones up to 1440px desktops, with a mobile
-  navigation menu and no horizontal overflow.
-- Accessible by default: semantic HTML, labeled inputs, keyboard-friendly
-  modal, visible focus states, and meaningful alt text.
+- Modern Home page with hero section, poster collage, and catalog highlights.
+- Responsive movie catalog with title search and debounced results.
+- Detailed movie modal with rating, release date, runtime, genres, network, and synopsis.
+- Robust loading, error, empty, and retry states.
+- About and Contact pages with responsive navigation.
+- Fully responsive design from mobile to desktop with no horizontal overflow.
+- Accessible UI with semantic HTML, keyboard-friendly interactions, focus states, and descriptive alt text.
+
+## Stack
+React
+React Router
+Tailwind CSS v4
+Vite
+Lucide React
+TVMaze API
 
 ## Project structure
 
