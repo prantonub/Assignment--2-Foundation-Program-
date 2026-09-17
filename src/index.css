@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-ink: #060810;
+  --color-marquee: #0b0e1a;
+  --color-panel: #10152a;
+  --color-panel-raised: #161c37;
+  --color-hairline: rgba(148, 163, 214, 0.14);
+
+  --color-primary: #2563eb;
+  --color-primary-dim: #1d4fc4;
+  --color-secondary: #4f46e5;
+  --color-bulb: #f5a524;
+
+  --color-paper: #f5f6fb;
+  --color-fog: #aab1cc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-marquee);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-bulb);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-panel-raised);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* clamp long summary/overview text blocks from the API */
+.prose-summary p {
+  margin-bottom: 0.85em;
+}
+.prose-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
