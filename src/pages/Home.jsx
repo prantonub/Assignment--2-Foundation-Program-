@@ -1,6 +1,7 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Film, Search, Sparkles, Star } from "lucide-react";
+import { Film, List, Search, Star } from "lucide-react";
 import { getShowsSample } from "../services/tvmazeApi";
 import { formatRating } from "../utils/format";
 
@@ -18,7 +19,7 @@ const FEATURES = [
       "Browse an ever-growing library spanning every genre and network.",
   },
   {
-    icon: Sparkles,
+    icon: List,
     title: "Full details, one click",
     description:
       "Ratings, genres, runtime, and a synopsis for every show you open.",
@@ -30,7 +31,7 @@ export default function Home() {
 
   useEffect(() => {
     let active = true;
-    getShowsSample(6)
+    getShowsSample(28)
       .then((shows) => {
         if (active) setPosters(shows);
       })
@@ -73,8 +74,7 @@ export default function Home() {
             <p className="mt-6 max-w-md text-base text-fog sm:text-lg">
               Browse thousands of movies and TV shows, search by title, and
               pull up every detail, from ratings and genres to runtime and
-              more,
-              before you press play.
+              more, before you press play.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -113,6 +113,7 @@ export default function Home() {
                 "translate-y-1",
                 "-translate-y-4",
               ];
+
               return (
                 <div
                   key={index}
@@ -164,6 +165,7 @@ export default function Home() {
               <h2 className="font-display text-3xl tracking-wide text-white">
                 On the catalog right now
               </h2>
+
               <Link
                 to="/movies"
                 className="shrink-0 text-sm font-medium text-primary hover:text-white"
@@ -172,12 +174,12 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="mt-6 flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+            <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7">
               {posters.map((show) => (
                 <Link
                   to="/movies"
                   key={show.id}
-                  className="w-32 shrink-0 sm:w-36"
+                  className="min-w-0"
                 >
                   <div className="overflow-hidden rounded-xl border border-hairline bg-panel">
                     <img
@@ -186,9 +188,11 @@ export default function Home() {
                       className="aspect-[2/3] w-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
+
                   <p className="mt-2 line-clamp-1 text-sm font-medium text-white">
                     {show.name}
                   </p>
+
                   <p className="text-xs text-fog">
                     ⭐ {formatRating(show.rating)}
                   </p>
@@ -201,3 +205,4 @@ export default function Home() {
     </div>
   );
 }
+

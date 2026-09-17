@@ -1,7 +1,6 @@
+
 import { Link } from "react-router-dom";
 
-
-// lucide-react no longer ships brand marks, so these are small inline glyphs.
 function GithubIcon(props) {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" {...props}>
@@ -44,6 +43,7 @@ export default function Footer() {
             >
               <GithubIcon />
             </a>
+
             <a
               href="https://twitter.com"
               target="_blank"
@@ -56,8 +56,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-hairline pt-6 text-sm text-fog">
-          <p>© 2026 Movie World. All rights reserved.</p>
+        <div className="mt-3 text-sm text-fog">
+          <div>
+            <p>© 2026 Movie World. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

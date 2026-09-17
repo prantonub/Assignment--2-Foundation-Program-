@@ -1,7 +1,6 @@
 # Movie World
 
-A polished, responsive movie and TV show discovery app. Browse a full
-catalog, search by title, and open a details modal for any show.
+A polished, responsive movie and TV show discovery app. Browse a full catalog, search by title, and open a details modal for any show.
 
 ## Features
 
