@@ -13,12 +13,12 @@ A responsive movie and TV show discovery app built with React. Browse shows, sea
 - Accessible UI with semantic HTML, keyboard-friendly interactions, focus states, and descriptive alt text.
 
 ## Stack
-React
-React Router
-Tailwind CSS v4
-Vite
-Lucide React
-TVMaze API
+-React
+-React Router
+-Tailwind CSS v4
+-Vite
+-Lucide React
+-TVMaze API
 
 ## Project structure
 
