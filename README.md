@@ -54,4 +54,4 @@ src/
 ## Deployment
 
 **Vercel**
-LIVE: 
+LIVE: https://movie-world-prantonub.vercel.app/
